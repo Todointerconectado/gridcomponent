@@ -71,18 +71,3 @@
     width: 100%;
     height: 100%;
 }
-
-@media screen and (min-width: 790px) {
-    .container-contacts {
-        margin-top: 30px;
-    }
-
-    .container-contacts_figure-img {
-        width: 50px;
-    }
-
-    /* ---- Boton de subida ----*/
-    .fleche{
-        width: 50px;
-    }
-}

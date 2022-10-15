@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* Primary */
+    --cyan: rgb(43, 180, 177);
+    --cyanSure: rgb(75, 191, 190);
+    --brightYellow: rgb(175, 206, 38);
+
+    /* Neutral */
+    --lightGray: rgb(229, 239, 245);
+    --grayishBlue: rgb(152, 166, 189);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body{
+    padding: 77px 20px 20px 20px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--grayishBlue);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------- Main -------------------------------- */
+.main {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    background: white;
+}
+
+
+/* --------------------- Our Community ----------------------- */
+.ourCommunity {
+    padding: 33px 24px 24px 24px;
+    background: var(--lightGray);
+    width: 100%;
+    height: 270px;
+}
+
+.communityTitle {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+.communitySubtitle {
+    margin: 25px 0 12px 0;
+    font-size: 1em;
+    color: var(--brightYellow);
+}
+
+.communityText {
+    font-size: 0.85em;
+    line-height: 28px;
+    color: var(--grayishBlue);
+}
+
+
+/* --------------------- Monthly Subscription ---------------- */
+.monthlySubscription {
+    padding: 27px 24px 24px 24px;
+    background: var(--cyan);
+    width: 100%;
+    height: 230px;
+    color: var(--lightGray);
+}
+
+.monthlySubscription h2 {
+    font-size: 1.1em;
+}
+
+.price {
+    display: inline-block;
+    padding: 24px 10px 16px 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.payment {
+    display: inline-block;
+    padding: 24px 10px 16px 0;
+    font-size: 1em;
+    color: var(--lightGray);
+    opacity: .6;
+}
+
+.monthlySubscription p {
+    padding-bottom: 20px;
+}
+
+.monthlySubscription button {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 5px rgb(0, 0, 0, .3);
+    width: 100%;
+    max-width: 261px;
+    height: 48px;
+    background: var(--brightYellow);
+    color: var(--lightGray);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: transform 300ms ease;
+}
+
+.monthlySubscription button:active {
+    transform: scale(.9);
+}
+
+
+/* --------------------- Features Lists ---------------------- */
+.featuresList {
+    background: var(--cyanSure);
+    padding: 28px 24px 24px 24px;
+    width: 100%;
+    height: 228px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    color: var(--lightGray);
+}
+
+.featuresList h2 {
+    font-size: 18px;
+}
+
+.featuresList ul li {
+    font-size: .85em;
+    font-weight: 300;
+    opacity: .9;
+    line-height: 20px;
+    list-style-type: none;
+}
+
+
+/* --------------------- FOOTER ------------------------------ */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: rgb(51, 68, 138);
+    font-weight: 600;
+    letter-spacing: 2;
+}
+
+@media screen and (min-width: 790px) {
+
+    .body{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            'main'
+            'footer'
+        ;
+        gap: 200px;
+    }
+
+
+    .main {
+        grid-area: main;
+        margin: 100px auto 0;
+        width: 100%;
+        max-width: 636px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            'ourCommunity         ourCommunity'
+            'monthlySubscription  featuresList'
+        ;
+    }
+
+    /* ----------------- Our Community ------------------- */
+    .ourCommunity {
+        padding: 43px 40px 46px 40px;
+        grid-area: ourCommunity;
+        height: 215px;
+    }
+
+    .communityTitle {
+        font-size: 1.45em;
+    }
+
+    .communitySubtitle {
+        font-size: 1.1em;
+    }
+
+    .communityText {
+        font-size: 1em;
+        line-height: 27px;
+    }
+
+    /* ----------------- Monthly Subscription ------------ */
+    .monthlySubscription {
+        padding: 20px 40px;
+        grid-area: monthlySubscription;
+        height: 258px;
+    }
+
+    /* ----------------- Features Lists ------------------ */
+    .featuresList {
+        padding: 20px 40px;
+        grid-area: featuresList;
+        height: 258px;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
