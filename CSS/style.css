@@ -9,6 +9,7 @@
     /* Neutral */
     --lightGray: rgb(229, 239, 245);
     --grayishBlue: rgb(152, 166, 189);
+    --grayishBlueSure: rgb(152, 166, 189, .97);
 }
 
 * {
@@ -24,7 +25,8 @@
     height: 100%;
     font-family: 'Karla', sans-serif;
     font-size: 16px;
-    background: var(--grayishBlue);
+    background: linear-gradient(var(--grayishBlueSure), var(--grayishBlueSure)), url(../images/fondo.webp);
+    background-size: contain;
     display: flex;
     flex-direction: column;
     gap: 30px;
