@@ -104,7 +104,11 @@
     padding-bottom: 20px;
 }
 
-.monthlySubscription button {
+.monthlySubscription a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 5px rgb(0, 0, 0, .3);
@@ -117,10 +121,17 @@
     font-weight: 700;
     letter-spacing: 1.5px;
     transition: transform 300ms ease;
+    cursor: pointer;
+    transition: 
+                opacity 300ms ease;
 }
 
-.monthlySubscription button:active {
-    transform: scale(.9);
+.monthlySubscription a:hover {
+    opacity: .9;
+}
+
+.monthlySubscription a:active {
+    transform: scale(.95);
 }
 
 
